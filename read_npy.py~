@@ -1,0 +1,41 @@
+"""
+
+"""
+import numpy as np
+from matplotlib import pyplot as plt
+
+if 1:
+    # difference b/w vino21 and 22 
+    #  using  fake-quantize layer  
+    #  using  quant/dequant-linear layer
+    
+    #fig = "emphasizedImage.tif"
+    fig = "Accordion-842.jpg"
+    
+    datA = "save_np_ovino21.4_"+fig+"_model.test-int8-Alex.ovino-nncrf-int8.ovino21.4_mo.cut.xml.npy"
+    datB = "save_np_ovino22.1_"+fig+"_model.test-int8-Alex.ovino-nncrf-int8.ovino22.1_mo.cut.xml.npy"
+    datX = "save_np_ovino21.4_"+fig+"_model.test-int8-Alex.onnx-rt-int8.cut.onnx.npy"
+    datY = "save_np_ovino22.1_"+fig+"_model.test-int8-Alex.onnx-rt-int8.cut.onnx.npy"
+
+    datA = np.load(datA)
+    datB = np.load(datB)
+    datX = np.load(datX)
+    datY = np.load(datY)
+
+    print("diff b/w vino21-22 w/ fake-quantize min ", (datA-datB).min() )
+    print("diff b/w vino21-22 w/ fake-quantize max ", (datA-datB).max() )
+    print("diff b/w vino21-22 w/ quant/dequant-linear min ", (datX-datY).min() )
+    print("diff b/w vino21-22 w/ quant/dequant-linear max ", (datX-datY).max() )
+
+    fig = plt.figure("test1", figsize=(6,5))
+    plt.title('diff b/w vino21-22 w/ fake-quantize')
+
+    #plt.hist( (datA-datB).flatten(), range=(-0.5, 0.5), bins=200, histtype="step", label='1')
+    plt.hist( (datX-datY).flatten(), range=(-0.1, 0.1), bins=200, histtype="step", label='1')
+
+    #plt.legend(loc='upper left')
+    plt.xlabel('feature diff (vino22.1 - vino21.4)', fontsize=16)
+    plt.ylabel('entries', fontsize=16)
+    fig.tight_layout()
+    plt.show()
+
