@@ -1,5 +1,7 @@
 
 ## status
+Some strage trouble, for a while, I can't upload feature data,<br>
+please run infere_ovinoXX.X.py to generate .npy data
 
 ## code
 infere_ovino21.4.py<br>
