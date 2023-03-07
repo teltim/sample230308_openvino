@@ -1,6 +1,6 @@
 
 ## status
-Some strage trouble, for a while, I can't upload feature data,<br>
+Some strage trouble, for a while, I can't upload output feature data,<br>
 please run infere_ovinoXX.X.py under venv to generate *.npy data
 
 ## code
