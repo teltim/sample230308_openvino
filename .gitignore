@@ -1,0 +1,10 @@
+save_np_ovino21.4_Accordion-842.jpg_model.test-int8-Alex.onnx-rt-int8.cut.onnx.npy
+save_np_ovino21.4_Accordion-842.jpg_model.test-int8-Alex.ovino-nncrf-int8.ovino21.4_mo.cut.xml.npy
+save_np_ovino21.4_Zebra-1.jpg_model.test-int8-Alex.onnx-rt-int8.cut.onnx.npy
+save_np_ovino21.4_Zebra-1.jpg_model.test-int8-Alex.ovino-nncrf-int8.ovino21.4_mo.cut.xml.npy
+save_np_ovino22.1_Accordion-842.jpg_model.test-int8-Alex.onnx-rt-int8.cut.onnx.npy
+save_np_ovino22.1_Accordion-842.jpg_model.test-int8-Alex.ovino-nncrf-int8.ovino22.1_mo.cut.xml.npy
+save_np_ovino22.1_Zebra-1.jpg_model.test-int8-Alex.onnx-rt-int8.cut.onnx.npy
+save_np_ovino22.1_Zebra-1.jpg_model.test-int8-Alex.ovino-nncrf-int8.ovino22.1_mo.cut.xml.npy
+sample-model/model.test-int8-Alex.ovino-nncrf-int8.onnx
+model.test-int8-Alex.ovino-nncrf-int8.onnx
