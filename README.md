@@ -35,11 +35,14 @@ save_np_ovino21.4_Accordion-842.jpg_model.test-int8-Alex.ovino-nncrf-int8.ovino2
 save_np_ovino22.1_Accordion-842.jpg_model.test-int8-Alex.ovino-nncrf-int8.ovino22.1_mo.cut.xml.npy    
 
 
-## the difference we observe b/w openvino version and operation layers is, for instance, as follows     
-usig "Accordion-842.jpg" <br>
+## the difference we observe b/w openvino version and onnx-op layers is as follows     
+for instance, usig "Accordion-842.jpg" <br>
 difference b/w vino21-22 using fake-quantize (nncf-quantization) :  <br>
-  min  0.0 <br>
-  max  0.0 <br>
+&emsp;min  0.0 <br>
+&emsp;max  0.0 <br>
 difference b/w vino21-22 using quant/dequant-linear (onnx-rt) :  <br>
-  min  -0.033699512<br>
-  max  0.03252697
+&emsp;min  -0.03369951<br>
+&emsp;max  +0.03252697
+
+A model w/ fake-quantize layer outputs the same values b/w 21 and 22<br>
+A model w/ quant/dequant-linear layer outputs different values b/w 21 and 22 
